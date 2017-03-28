@@ -14,88 +14,22 @@
 </head>
 <body ng-app="myApp" ng-init="counts=[1,33,424,6,12,444,2017]">
 	<div ng-controller="myCtrl">
-		{{myUrl}}
-		<hr>
 		<p>
-			{{myWelcome}}
-		</p>
-		<hr>
-		{{myHeader}}<br>
-		<hr>
-		<p>
-			The time: {{theTime}}
-		</p>
-		<hr>
-		<p>
-			hex: {{hex}}
-		</p>
-		<hr>
-		<p>
-			<ul>
-				<li ng-repeat="x in counts">
-					{{x | $myfilter}}
-				</li>
-			</ul>
-		</p>
-		<hr style="clear: both;">
-		<p>
-			<b>请输入姓名：</b><br>
-			<b>姓：</b><input type="text" ng-model="lastName"><br>
-			<b>名：</b><input type="text" ng-model="firstName"><br>
-			<h1>{{firstName + " " + lastName}}</h1>
-			<h1>{{fullName}}</h1>
+			{{res}}
 		</p>
 	</div>
 </body>
 <script type="text/javascript">
 	var app = angular.module('myApp', []);
-	//自定义服务
-	app.service('$myservice', function(){
-		this.myFunc	= function(x){
-			return x.toString(16);
-		};
-	});
-
-	//过滤器
-	app.filter('$myfilter',['$myservice', function($myservice){
-		return function(x){
-			return $myservice.myFunc(x);
-		};
-	}]);
-
-	app.controller('myCtrl', ['$scope', '$location', '$http', '$timeout', '$interval', '$myservice',
-		function($scope, $location, $http, $timeout, $interval, $myservice){
-		$scope.myUrl = $location.absUrl();
-
-		$http.get("1hello.html").then(function(response){
-			$scope.myWelcome = response.data;
-		});
-
-		$scope.myHeader = "Hello World!";
-		$timeout(function(){
-			$scope.myHeader = "How are you today?";
-		}, 2000);
-
-		$interval(function(){
-			$scope.theTime = new Date().toLocaleTimeString();
-		},1000);
-		//使用原生interval的实现
-		/*
-		$scope.theTime = new Date().toLocaleTimeString();
-		$scope.setTime = function(){
-			$scope.$apply(function(){
-				$scope.theTime = new Date().toLocaleTimeString();
-			});
-		};
-		*/
-		setInterval($scope.setTime, 1000);
-
-		$scope.hex = $myservice.myFunc(255);
-		$scope.firstName = "a";
-		$scope.lastName = " b";
-		//$scope.fullName = $scope.firstName + " " + $scope.lastName;
-		$scope.$watch('firstName','lastName', function(){
-			$scope.fullName = $scope.firstName + " " + $scope.lastName;
+	app.controller('myCtrl', ['$scope', '$http', function($scope, $http){
+		$http({
+			method: 'GET',
+			url: 'data.json'
+		}).then(function successCallback(res){
+			console.log(res.data.sites[0].Name);
+			$scope.res = res.data;
+		},function errorCallback(res){
+			console.log(res);
 		});
 	}]);
 </script>

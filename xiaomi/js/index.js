@@ -1,3 +1,4 @@
+
 (function($, window){
 	var ui = {
 		$search_text : $('#search-text'),
