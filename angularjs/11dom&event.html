@@ -1,0 +1,52 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<script type="text/javascript" src="angular.min.js"></script>
+	<title>Document</title>
+	<style type="text/css">
+	</style>
+</head>
+<body ng-app="myApp" ng-init="">
+	<div ng-controller="myCtrl">
+		<p>
+			<button ng-disabled="mySwitch">点我</button>
+		</p>
+
+		<p>
+			<input type="checkbox" ng-disabled="mySwitch">按钮</input>
+		</p>
+
+		<p ng-show="mySwitch">
+			我是不可见的
+		</p>
+
+		<p ng-hide="mySwitch">
+			我是可见的
+		</p>
+
+		<p>
+			<select ng-model="sel" ng-change="toggle()">
+				<option value="true">阻止</option>
+				<option value="false">允许</option>
+			</select>
+		</p>
+
+		mySwitch:{{mySwitch}}
+	</div>
+</body>
+<script type="text/javascript">
+	var app = angular.module('myApp', []);
+	app.controller('myCtrl', ['$scope', '$http', function($scope, $http){
+		$scope.sel = "true";
+		$scope.mySwitch = true;
+		$scope.toggle = function(){
+			if(this.sel == 'false'){
+				$scope.mySwitch = false;
+			}else{
+				$scope.mySwitch = true;
+			}
+		};
+	}]);
+</script>
+</html>
