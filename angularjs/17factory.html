@@ -1,0 +1,47 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<script type="text/javascript" src="angular.min.js"></script>
+	<title>Document</title>
+	<style type="text/css">
+	</style>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+	<input type="button" ng-click="saveUser()" value="save">
+</body>
+<script type="text/javascript">
+	var app = angular.module('myApp', []);
+	app.factory('User', function($http){
+		var backendUrl = "http://localhost:3000";
+		var service = {
+			user: {},
+			setName: function(newName){
+				service.user.name = newName;
+				return service;
+			},
+			setEmail: function(newEmail){
+				service.user.email = newEmail;
+				return service;
+			},
+			save: function(){
+				return $http.post(backendUrl + '/users',{
+					user: service.user
+				});
+			}
+		};
+		return service;
+	});
+	app.controller('myCtrl', ['$scope', '$http', 'User', function($scope, $http, User){
+		//$scope.saveUser = function(){
+			//User.setName("T-MAC").setEmail("tmac@qq.com");
+			//User.save();
+		//};
+		$scope.saveUser = function(){
+			User.setName("T-MAC").setEmail("tmac@qq.com");
+			User.save();
+		};
+	}]);
+
+</script>
+</html>

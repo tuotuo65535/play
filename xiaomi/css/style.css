@@ -1,0 +1,291 @@
+@font-face{
+	font-family: 'iconfont';
+	src: url('../font/iconfont.ttf');
+}
+
+.iconfont{
+	font-size: 20px;
+	font-style: normal;
+	line-height: 20px;
+	margin-right: 4px;
+	vertical-align: -2px;
+}
+
+.icon{
+	font-family: "iconfont";
+}
+
+body{
+	color: #333;
+	font: 14px/1.5 arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;
+}
+
+/*--------------------------topbar开始--------------------------*/
+
+.site-topbar .topbar-nav{
+	font-size: 12px;
+	height: 40px;
+	line-height: 40px;
+}
+
+.site-topbar .topbar-nav .active{
+	color: #fff;
+}
+
+.site-topbar a{
+	color: #b0b0b0;
+	line-height: 40px;
+}
+
+.site-topbar .sep{
+	color: #424242;
+	margin: 0 3px;
+}
+
+.site-topbar .topbar-cart{
+	margin-left: 15px;
+	width: 120px;
+}
+
+/*--------------------------topbar结束--------------------------*/
+
+/*--------------------------header开始--------------------------*/
+.site-header{
+	height: 100px;
+	position: relative;
+	z-index: 20;
+}
+
+.container{
+	margin: 0 auto;
+	width: 1226px;
+}
+
+.site-header .header-logo{
+	background: #ff6700 none repeat scroll;
+	float: left;
+	height: 55px;
+	margin-top: 22px;
+	padding: 3px;
+	width: 55px;
+}
+
+.pull-left{
+	float: left;
+}
+
+.site-header .header-nav{
+	float: left;
+	font-size: 16px;
+	height: 100px;
+	list-style-type: none;
+	margin: 0;
+	padding: 12px 0 0 30px;
+	position: relative;
+	width: 868px;
+	z-index: 10;
+}
+
+.site-header .header-nav .item-category{
+	float: left;
+	height: 100%;
+	position: relative;
+	width: 138px;
+}
+
+.site-header .header-nav .nav-item{
+	float: left;
+}
+
+.site-header .header-nav .link{
+	color: #333;
+	display: block;
+	padding: 26px 18px 38px;
+}
+
+.site-header .header-search{
+	margin-top: 25px;
+	width: 296px;
+}
+
+.site-header .search-form{
+	height: 50px;
+	position: relative;
+	width: 296px;
+}
+
+.site-header .search-form .search-text{
+	border: 1px solid #e0e0e0;
+	font-size: 14px;
+	height: 50px;
+	line-height: 48px;
+	outline: 0 none;
+	padding: 0 10px;
+	position: absolute;
+	right: 51px;
+	top: 0;
+	width: 223px;
+	z-index: 1;
+}
+
+.iconfont1{
+	background: #fff;
+	color: #616161;
+	font-size: 24px;
+	font-style: normal;
+	height: 24px;
+	line-height: 50px;
+	padding: 0 13px;
+	width: 24px;
+}
+
+.site-header .btn-search{
+	background: #fff none repeat scroll 0 0;
+	border: 1px solid #e0e0e0;
+	color: #616161;
+	font-size: 24px;
+	height: 50px;
+	line-height: 24px;
+	outline: 0 none;
+	position: absolute;
+	right: 0;
+	width: 52px;
+	z-index: 2;
+}
+
+.site-header .search-keywords{
+	position: absolute;
+	right: 62px;
+	text-align: right;
+	top: 14px;
+	z-index: 2;
+}
+
+.site-header .search-keywords a {
+	background: #eee;
+	color: #757575;
+	display: inline-block;
+	font-size: 12px;
+	margin-left: 5px;
+	padding: 0 5px;
+}
+
+.site-category{
+	font-size: 14px;
+	height: 460px;
+	left: -85px;
+	position: absolute;
+	top: 88px;
+	width: 234px;
+	z-index: 21;
+}
+
+.category-list{
+	background: rgba(0, 0, 0, 0.6);
+	border: 0 none;
+	color: #fff;
+	height: 460px;
+	list-style-type: none;
+	margin: 0;
+	padding: 20px 0;
+}
+
+.category-list .category-item{
+	position: relative;
+}
+
+.category-list .category-item .title{
+	color: #fff;
+	display: block;
+	height: 42px;
+	line-height: 42px;
+	padding-left: 30px;
+	position: relative;
+}
+
+.iconfont2{
+	color: rgba(255, 255, 255, 0.5);
+	float: right;
+	font-size: 20px;
+	font-style: normal;
+	line-height: 20px;
+	position: absolute;
+	right: 18px;
+	top: 10px;
+}
+/*--------------------------header结束--------------------------*/
+
+/*--------------------------container开始--------------------------*/
+
+.model-banner{
+	position: relative;
+}
+
+.model-banner .banner-wrap{
+	height: 460px;
+	overflow: hidden;
+	width: 1226px;
+}
+
+.ui-pager{
+	bottom: 20px;
+	color: #666;
+	display: block;
+	font-size: 0;
+	left: auto;
+	position: absolute;
+	right: 30px;
+	text-align: right;
+	width: 400px;
+	z-index: 100;
+}
+
+.ui-pager li{
+	display: inline-block;
+}
+
+.ui-pager li:hover a, .ui-pager .active a{
+	background: rgba(255, 255, 255, 0.4);
+	border-color: rgba(0, 0, 0, 0.4);
+}
+
+.ui-pager a{
+	background: rgba(0, 0, 0, 0.4);
+	border: 2px solid #757575;
+	border-radius: 50%;
+	float: left;
+	height: 10px;
+	margin: 0 5px;
+	transition: all 0.2s ease 0s;
+	width: 10px;
+}
+
+.model-banner .btn-pager{
+	height: 70px;
+	position: absolute;
+	text-align: center;
+	top: 195px;
+	width: 40px;
+	z-index: 100;
+}
+
+.model-banner .btn-prev{
+	left: 234px;
+}
+
+.model-banner .btn-next{
+	right: 0;
+}
+
+.iconfont3{
+	color: #cfc8c8;
+	font-size: 32px;
+	font-style: normal;
+	height: 70px;
+	line-height: 70px;
+	text-align: center;
+	width: 40px;
+}
+
+
+/*--------------------------container结束--------------------------*/

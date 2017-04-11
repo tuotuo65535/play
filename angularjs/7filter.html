@@ -1,0 +1,27 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<script type="text/javascript" src="angular.min.js"></script>
+	<title>Document</title>
+	<style>
+	</style>
+</head>
+<body ng-app="myApp">
+	<div ng-controller="myCtrl">
+		<p><input type="
+		text" ng-model="test"></p>
+		<ul>
+			<li ng-repeat="x in names | filter:test | orderBy:'country'">
+				{{(x.name | uppercase) + ',' + x.country}}
+			</li>
+		</ul>
+	</div>
+</body>
+<script type="text/javascript">
+	var app = angular.module('myApp', []);
+	app.controller('myCtrl', ['$scope','$rootScope', function($scope,$rootScope){
+		$scope.names = [{name:"Tracy",country:"Houston"},{name:"Kobe",country:"LosAngeles"},{name:"Timmy",country:"Sanantonio"},{name:"Chauncey",country:"Detroit"},{name:"Anthony",country:"Denver"}];
+	}]);
+</script>
+</html>

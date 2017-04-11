@@ -1,0 +1,54 @@
+.site-topbar{
+	background: rgb(51, 51, 51);
+	border-bottom: 1px solid rgb(223, 223, 223);
+	font-size: 12px;
+	height: 40px;
+	width: 100%;
+}
+
+body{
+	background-color: #fff;
+	color: #333;
+	font: 14px/1.5 arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;
+	min-width: 1222px;
+}
+
+body, ul, li, div, a{
+	margin: 0;
+	padding: 0;
+}
+
+*, *::after, *::before{
+	box-sizing: border-box;
+}
+
+.clearfix::after{
+	clear: both;
+	content: "";
+	display: block;
+	font-size: 0;
+	height: 0;
+}
+
+.container{
+	margin: 0 auto;
+	width: 1226px;
+}
+
+.pull-left{
+	float: left;
+}
+
+.pull-right{
+	float: right;
+}
+
+:link, *:visited{
+	text-decoration: none;
+}
+
+a{
+	color: #757575;
+	text-decoration: none;
+	outline: 0;
+}

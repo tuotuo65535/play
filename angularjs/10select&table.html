@@ -1,0 +1,51 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<script type="text/javascript" src="angular.min.js"></script>
+	<title>Document</title>
+	<style type="text/css">
+		table{
+			border-collapse: collapse;
+			border: none;
+		}
+
+		table tr th, table tr td{
+			border:1px solid #0094ff;
+		}
+	</style>
+</head>
+<body ng-app="myApp" ng-init="options={google:{site:'Google',url:'google.com'},baidu:{site:'Baidu',url:'baidu.com'},yahoo:{site:'Yahoo',url:'yahoo.com'}}">
+	<div ng-controller="myCtrl">
+		<h1>ng-options</h1>
+		<select ng-model="selectedSite" ng-options="x as x for (x,y) in options"></select>
+		<br>
+		{{selectedSite.url}}
+		<hr>
+		<h1>ng-repeat option</h1>
+		<select ng-model="selectPlayer">
+			<option ng-repeat="x in players" value='{{x.team}}'>
+				{{x.name}}
+			</option>
+		</select>
+		<br>
+		{{selectPlayer}}
+		<hr>
+		<h1>table</h1>
+		<table>
+			<tr ng-repeat="x in players">
+				<td>{{x.name}}</td>
+				<td>{{x.team}}</td>
+			</tr>
+		</table>
+	</div>
+</body>
+<script type="text/javascript">
+	var app = angular.module('myApp', []);
+	app.controller('myCtrl', ['$scope', '$http', function($scope, $http){
+		$scope.selectedSite = 'google';
+		$scope.players = [{name:'tmac',team:'Rockets'},{name:'kobe',team:'Lakers'},{name:'timmy',team:'spurse'}];
+		$scope.selectPlayer = $scope.players[0].team;
+	}]);
+</script>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<script type="text/javascript" src="angular.min.js"></script>
+	<title>Document</title>
+</head>
+<body>
+	<div ng-app="" ng-init="person={firstName:'John',lastName:'Doe'};points=[1,15,21,3,553]">
+		<p>姓为{{person.lastName}}</p>
+		<p>名为<span ng-bind="person.firstName"></span></p>
+		<p>第三个值为{{points[2]}}</p>
+	</div>
+</body>
+<script type="text/javascript">
+</script>
+</html>

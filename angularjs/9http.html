@@ -1,0 +1,36 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<script type="text/javascript" src="angular.min.js"></script>
+	<title>Document</title>
+	<style type="text/css">
+		li{
+			float: left;
+			list-style: none;
+			margin-left: 5px;
+		}
+	</style>
+</head>
+<body ng-app="myApp" ng-init="counts=[1,33,424,6,12,444,2017]">
+	<div ng-controller="myCtrl">
+		<p>
+			{{res}}
+		</p>
+	</div>
+</body>
+<script type="text/javascript">
+	var app = angular.module('myApp', []);
+	app.controller('myCtrl', ['$scope', '$http', function($scope, $http){
+		$http({
+			method: 'GET',
+			url: 'data.json'
+		}).then(function successCallback(res){
+			console.log(res.data.sites[0].Name);
+			$scope.res = res.data;
+		},function errorCallback(res){
+			console.log(res);
+		});
+	}]);
+</script>
+</html>
