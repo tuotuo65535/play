@@ -1,0 +1,39 @@
+{
+  "name": "HelloWorld",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "packager": "electron-packager . HelloWorld --out ./OutApp"
+  },
+  "keywords": [
+    "HelloWorld"
+  ],
+  "author": "ccc",
+  "license": "CC0-1.0",
+  "build": {
+    "appId": "com.electron.ccc.hello",
+    "copyright": "ccc",
+    "productName": "HelloWorld",
+    "dmg": {
+      "icon": "build/icon.icns",
+      "window": {
+        "x": 100,
+        "y": 100,
+        "width": 800,
+        "height": 600
+      }
+    },
+    "win": {
+      "icon": "build/icon.ico"
+    }
+  },
+  "devDependencies": {
+    "electron": "~1.7.8",
+    "electron-packager": "^9.1.0"
+  },
+  "dependencies": {
+    "tracer": "0.8.11"
+  }
+}
