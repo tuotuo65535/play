@@ -34,6 +34,8 @@
     "electron-packager": "^9.1.0"
   },
   "dependencies": {
-    "tracer": "0.8.11"
+    "tracer": "0.8.11",
+    "debug": "^3.1.0",
+    "log4js": "^2.3.5"
   }
 }

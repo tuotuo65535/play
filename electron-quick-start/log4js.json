@@ -1,0 +1,28 @@
+{
+  "appenders": {
+    "datefile": {
+      "type": "dateFile",
+      "filename": "./log/electron",
+      "alwaysIncludePattern":false,
+      "backups": 3
+    },
+    "console": {
+      "type": "console"
+    },
+    "file": {
+      "type" : "file",
+      "filename" : "logs/app.log",
+      "maxLogSize" : 204800,
+      "backups" : 10,
+      "category" : "app"
+    }
+  },
+  "categories": {
+    "default": {
+      "appenders": [
+        "file","console"
+      ],
+      "level": "info"
+    }
+  }
+}
