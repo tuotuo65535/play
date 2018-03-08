@@ -1,0 +1,67 @@
+/*reset css 重置浏览器样式*/
+*,
+::before,
+::after {
+    margin: 0px;
+    padding: 0px;
+    /*针对移动端*/
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box; /*主流浏览器兼容*/
+    -webkit-tap-highlight-color: transparent; /*点击高亮效果清除*/
+}
+
+body {
+    font-size: 14px;
+    color: #333;
+    font-family: 'Microsoft Yahei', sans-serif;
+}
+
+ul,ol {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #333333;
+}
+
+input, textarea {
+    outline: none;
+    border: none;
+    resize: none;
+    /*清除移动端输入框特有的样式*/
+    -webkit-appearance: none;
+}
+
+/* common css 公用样式 */
+.f_left {
+    float: left;
+}
+
+.f_right {
+    float: right;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display:block;
+    height: 0px;
+    line-height: 0px;
+    visibility: hidden;
+    clear: both;
+}
+
+.m_l10 {
+    margin-left: 10px;
+}
+
+.m_r10 {
+    margin-right: 10px;
+}
+
+/*精灵图*/
+[class^="icon_"], [class*=" icon_"]{
+
+}
+
