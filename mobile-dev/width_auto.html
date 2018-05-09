@@ -50,28 +50,6 @@
 		</div>
 	</nav>
 
-<script type="text/javascript">
-	(function(){
-		$(document).ready(() => {
-			clickBind();
-		});
-
-		let clickBind = () => {
-			$('.button_container').click(function(){
-				if($(this).hasClass('active')) {
-					$(this).removeClass('active');
-				} else {
-					$(this).addClass('active');
-				}
-
-				if($('.overlay').hasClass('open')) {
-					$('.overlay').removeClass('open');
-				} else {
-					$('.overlay').addClass('open');
-				}
-			});
-		}
-	})();
-</script>
+<script type="text/javascript" src="index.js"></script>
 </body>
 </html>
