@@ -3,21 +3,75 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>Document</title>
+	<title>精英教育</title>
+	<script type="text/javascript" src="zepto.js"></script>
 	<style type="text/css">
-		.progress {
-			position: fixed;
-			height: 1px;
-			background: #ff5a00;
-			width: 70%;
-			left: 0;
-			top: 0;
-		}
+		@import url(index.css)
 	</style>
 </head>
 <body>
 	<!-- 进度条 -->
 	<div class="progress">
 	</div>
+	<nav class="navbar">
+		<div class="container">
+			<div class="navbar-header">
+				<div>Hello Mobile</div>
+			</div>
+			<ul class="navbar-nav">
+				<li><a href="#" class="button">集团官网</a></li>
+				<li><a href="#" class="button">北京分校</a></li>
+				<li><a href="#" class="button">天津分校</a></li>
+				<li><a href="#" class="button">河北分校</a></li>
+				<li><a href="#" class="button">陕西分校</a></li>
+				<li><a href="#" class="button">浙江分校</a></li>
+				<li><a href="#" class="button">精通学堂</a></li>
+			</ul>
+			<div class="main-nav">
+				<div class="button_container">
+					<span class="top"></span>
+					<span class="middle"></span>
+					<span class="bottom"></span>
+				</div>
+			</div>
+			<div class="overlay" id="overlay">
+				<nav class="overlay-menu">
+					<ul class="navbar-nav">
+						<li><a href="#">集团官网</a></li>
+						<li><a href="#">北京分校</a></li>
+						<li><a href="#">天津分校</a></li>
+						<li><a href="#">河北分校</a></li>
+						<li><a href="#">陕西分校</a></li>
+						<li><a href="#">浙江分校</a></li>
+						<li><a href="#">精通学堂</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</nav>
+
+<script type="text/javascript">
+	(function(){
+		$(document).ready(() => {
+			clickBind();
+		});
+
+		let clickBind = () => {
+			$('.button_container').click(function(){
+				if($(this).hasClass('active')) {
+					$(this).removeClass('active');
+				} else {
+					$(this).addClass('active');
+				}
+
+				if($('.overlay').hasClass('open')) {
+					$('.overlay').removeClass('open');
+				} else {
+					$('.overlay').addClass('open');
+				}
+			});
+		}
+	})();
+</script>
 </body>
 </html>
