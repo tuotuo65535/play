@@ -5,7 +5,7 @@
 
 	let clickBind = () => {
 		$('.button_container').click(function(){
-			changeStatus($(this), 'avtive');
+			changeStatus($(this), 'active');
 			changeStatus($('.overlay'), 'open');
 		});
 	}
