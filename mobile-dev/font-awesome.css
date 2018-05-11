@@ -1,0 +1,18 @@
+a [class*="icon-"] {
+	display: inline;
+}
+
+[class*="icon-"] {
+	margin-top: 0;
+	width: auto;
+	height: auto;
+	background-image: none;
+	background-position: 0% 0%;
+	background-repeat: repeat;
+	vertical-align: baseline;
+	line-height: normal;
+}
+
+.icon-2x {
+	font-size: 2em;
+}
