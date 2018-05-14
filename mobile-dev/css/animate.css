@@ -43,3 +43,13 @@
 		transform: translate3d(0, 0, 0);
 	}
 }
+
+@keyframes rotateplane {
+	0% {
+		transform: translateY(-2px);
+	}
+
+	100% {
+		transform: translateY(7px);
+	}
+}

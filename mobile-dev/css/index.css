@@ -263,3 +263,28 @@ html, body {
 	content: "\f105";
 }
 
+.mouse {
+	width: 25px;
+	height: 45px;
+	border: 2px solid #fff;
+	position: absolute;
+	bottom: 40px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 12px;
+	z-index:1;
+}
+
+.mouse:after {
+	content: "";
+	position: absolute;
+	width: 5px;
+	height: 5px;
+	background-color: #fff;
+	border-radius: 100%;
+	left: 50%;
+	margin-left: -2.5px;
+	top: 10px;
+	animation: rotateplane 1.2s infinite ease-in-out;
+}
+
