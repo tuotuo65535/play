@@ -1,0 +1,32 @@
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: 'FontAwesome';
+	src:url('../fonts/fontawesome-webfont.woff?v=3.2.1') format('woff');
+}
+
+a [class*="icon-"] {
+	display: inline;
+}
+
+[class*="icon-"] {
+	margin-top: 0;
+	width: auto;
+	height: auto;
+	background-image: none;
+	background-position: 0% 0%;
+	background-repeat: repeat;
+	vertical-align: baseline;
+	line-height: normal;
+}
+
+.icon-2x {
+	font-size: 2em;
+}
+
+[class^="icon-"],[class*="icon-"] {
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased; /* webkit下防锯齿 */
+}
