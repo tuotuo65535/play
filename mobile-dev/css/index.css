@@ -3,6 +3,10 @@
 	font-family: "微软雅黑", "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+:after, :before {
+	box-sizing: border-box;
+};
+
 nav, ul {
 	padding: 0;
 	margin: 0;
@@ -17,6 +21,42 @@ html, body {
 	height: 100%;
 	margin: 0;
 }
+
+h1, h2 {
+	font-weight: 600;
+	color: #ff5a00;
+	font-size: 30px;
+	letter-spacing: 1px;
+	line-height: 1.5;
+}
+
+p {
+	margin: 0 0 25px;
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+blockquote {
+	border-color: #ff5a00;
+	color: #ff5a00;
+	display: block;
+	font-size: 22px;
+	position: relative;
+	margin: 0 0 20px;
+	padding: 10px 20px;
+	padding-left: 90px;
+	border-left: 5px solid;
+}
+
+blockquote:before {
+	content: "\f10d";
+	font-size: 55px;
+	font-family: FontAwesome;
+	position: absolute;
+	top: -4px;
+	left: 20px;
+}
+
 /** progress start **/
 .progress {
 	position: fixed;
@@ -285,6 +325,48 @@ html, body {
 	left: 50%;
 	margin-left: -2.5px;
 	top: 10px;
-	animation: rotateplane 1.2s infinite ease-in-out;
+	animation: rotateplane 1.2s ease-in-out infinite;
 }
 
+/** sectioni about start **/
+.content-section.alt-bg-light {
+	background-color: #fafafa;
+	border-top: 1px solid #f5f5f5;
+	border-bottom: 1px solid #d2d2d2;
+}
+
+.about {
+	text-align: center;
+}
+
+.content-section {
+	padding: 100px 0;
+}
+
+.about .container {
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.about .row-text {
+	position: relative;
+	padding: 0px 15px;
+	min-height: 1px;
+}
+
+.about h2 {
+	margin: 0 0 10px 0;
+	padding: 0;
+}
+
+.about p {
+	text-indent: 2em;
+	margin-bottom: 0;
+	color: #b1b1b1;
+}
+
+.about p.blockquote-p {
+	color: #ff5a00;
+}
