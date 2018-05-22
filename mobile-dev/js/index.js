@@ -30,7 +30,6 @@
 			} else {
 				opacity = 0.85 * (top/height);
 			}
-			console.log(opacity)
 			$('.navbar').css('background', 'rgba(0,0,0,' + opacity + ')');
 		}
 	}
