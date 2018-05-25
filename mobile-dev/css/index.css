@@ -70,6 +70,10 @@ blockquote:before {
 	left: 20px;
 }
 
+video {
+	display: block;
+}
+
 .white {
 	color: #fff;
 }
@@ -457,4 +461,20 @@ blockquote:before {
 
 .news-content li .new-title {
 	font-size: 100%;
+}
+
+.fill {
+	width: 100%;
+	height: 100%;
+}
+
+.center-block {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.img-responsive {
+	height: auto;
+	max-width: 100%;
 }
